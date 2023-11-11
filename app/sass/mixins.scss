@@ -1,0 +1,46 @@
+$break-xsmall: 30rem; // 480
+$break-small: 48rem; // 768 Ipad vertical
+$break-medium: 64rem; // 1024 Ipad horizontal
+$break-large: 75rem; // 1200
+
+@mixin query($media) {
+  @if $media == only-xsmall {
+    @media only screen and (max-width: $break-xsmall) { @content; }
+  }
+  @else if $media == only-small {
+    @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small) { @content; }
+  }
+  @else if $media == only-medium {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == only-large {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) { @content; }
+  }
+  @else if $media == only-xlarge {
+    @media only screen and (min-width: $break-large +1) { @content; }
+  }
+  @else if $media == up-xsmall {
+    @media only screen and (min-width: $break-xsmall) { @content; }
+  }
+  @else if $media == up-small {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+  @else if $media == up-medium {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == up-large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == down-xsmall {
+    @media only screen and (max-width: $break-xsmall) { @content; }
+  }
+  @else if $media == down-small {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == down-medium {
+    @media only screen and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == down-large {
+    @media only screen and (max-width: $break-large) { @content; }
+  }
+}

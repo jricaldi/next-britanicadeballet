@@ -1,0 +1,24 @@
+@import '@/sass/colors.scss';
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  &__text {
+    color: $color3;
+    padding: 0 5px;
+    h1 {
+      text-align: center;
+      font-size: 45px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 35px;
+      span {
+        color: $color2;
+      }
+    }
+  }
+}

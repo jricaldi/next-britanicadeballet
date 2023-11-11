@@ -1,0 +1,26 @@
+@import '@/sass/mixins.scss';
+@import '@/sass/colors.scss';
+
+.sectionList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+
+  &__title {
+    background-color: $color3;
+    margin: 0;
+    width: 100%;
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    color: $color2;
+
+    @include query(down-medium) {
+      font-size: 35px;
+    }
+  }
+
+}
