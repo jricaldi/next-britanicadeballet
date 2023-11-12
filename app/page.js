@@ -9,14 +9,14 @@ import {
 
 const LandingPage = () => {
   return (
-    <div>
+    <>
       {/* <Navigation /> */}
       <Home />
       <About />
       {/*<Clases /> */}
       {/*<Profesoras />*/}
       <Contacto />
-    </div>
+    </>
   );
 }
 
