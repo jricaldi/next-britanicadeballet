@@ -1,5 +1,6 @@
 import { Libre_Baskerville } from 'next/font/google'
 import { GoogleAnalytics } from '@/components';
+import 'normalize.css/normalize.css';
 import '@/sass/global.scss';
 
 const libre = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'] })
@@ -23,6 +24,7 @@ export const metadata = {
     description,
     creator: '@academiadballet',
   },
+  category: 'music and dance',
   icons: {
     icon: ['/ico.png']
   }

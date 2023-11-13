@@ -1,20 +1,20 @@
 import {
-  //Profesoras,
-  //Clases,
+  Profesoras,
+  Clases,
   Contacto,
   About,
   Home,
-  //Navigation
+  Navigation
 } from "@/containers";
 
 const LandingPage = () => {
   return (
     <>
-      {/* <Navigation /> */}
+      <Navigation />
       <Home />
       <About />
-      {/*<Clases /> */}
-      {/*<Profesoras />*/}
+      <Clases />
+      <Profesoras />
       <Contacto />
     </>
   );

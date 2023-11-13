@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import cn from "classnames";
 import parseHTML from 'html-react-parser';
@@ -15,15 +14,15 @@ const renderData = (details) => {
   if (typeof details === "string") {
     return parseHTML(details);
   }
-  return details;
+  return details();
 };
 
-const Section = ({ info, isClassSection, openMessageDialog }) => {
-  const backgroundSection = isClassSection ? "classSection" : "classTeachers";
+const Section = ({ info, isClassSection }) => {
+  const backgroundSection = isClassSection ? style.classSection : style.classTeachers;
   return (
     <article className={style.section} id={info.scrollId}>
       <div className={style.section__image}>
-        <Image src={info.image} alt={info.name} data-aos="fade-up" />
+        <Image src={info.image.name} alt={info.name} width={info.image.width} height={info.image.height} data-aos="fade-up" />
       </div>
       <div className={cn(style.section__info, backgroundSection)}>
         <span className={style.section__info__name} data-aos="zoom-out-right">

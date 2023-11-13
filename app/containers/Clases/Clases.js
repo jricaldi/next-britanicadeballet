@@ -3,7 +3,7 @@ import { dataClases } from "@/helpers/database";
 
 const enabledClases = dataClases.filter(clase => clase.showClass)
 
- const Clases = () => {
+const Clases = () => {
   return (
     <SectionList
       scrollId="id-clases"
