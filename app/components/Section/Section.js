@@ -37,7 +37,7 @@ const Section = ({ info, isClassSection }) => {
       <div className={cn(style.section__details, backgroundSection)}>
         <div
           className={cn(style.section__details__info, {
-            noColunmsText: info.noColunmsText,
+            [style.noColunmsText]: info.noColunmsText,
           })}
         >
           {renderData(info.details)}
