@@ -6,33 +6,38 @@ import Image from "next/image";
 import cn from 'classnames';
 import { Link as Slink } from 'react-scroll';
 import style from "./navigation.module.scss";
+import { useAnimate } from 'framer-motion';
 
 const Navigation = () => {
 
   const [menu, setMenu] = useState({
     topMenu: false,
     midMenu: false,
-    bottomMenu: false,
-    showMenu: false,
-    fadeMenu: false
+    bottomMenu: false
   })
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scope, animate] = useAnimate();
 
 
-  const handleOpenMenu = () => {
-    console.log('handleOpenMenu');
-    setIsMenuOpen(true);
-    setMenu((prev) => ({
-      topMenu: !prev.topMenu,
-      midMenu: !prev.midMenu,
-      bottomMenu: !prev.bottomMenu,
-      fadeMenu: !prev.fadeMenu
-    }));
+  const handleOpenMenu = () => {    
+    setMenu((prev) => {
+      const animationMenu = async () => {
+        if (prev.topMenu) {
+          await animate(scope.current, { opacity: 0 });
+          await animate(scope.current, { display: 'none' });
+        } else {
+          animate(scope.current, { opacity: 1, display: 'block' });
+        }
+      }
+
+      animationMenu();
+
+      return {
+        topMenu: !prev.topMenu,
+        midMenu: !prev.midMenu,
+        bottomMenu: !prev.bottomMenu,
+      }
+    });
   };
-
-  const handleCloseMenu = () => {
-    !menu.fadeMenu && setIsMenuOpen(false);
-  }
 
   return (
     <Header>
@@ -41,7 +46,7 @@ const Navigation = () => {
           <Image src='/logo.png' alt="Británica de ballet" width={166} height={339} />
         </Slink>
         <nav role="navigation">
-          <ul className={cn(style.navigation__menu, { [style.fadeMenu]: menu.fadeMenu, [style.showMenu]: isMenuOpen})} onClick={handleOpenMenu} onTransitionEndCapture={handleCloseMenu}>
+          <ul ref={scope} className={cn(style.navigation__menu)} onClick={handleOpenMenu} >
             <li>
               <Slink
                 to="id-clases-en-linea"
