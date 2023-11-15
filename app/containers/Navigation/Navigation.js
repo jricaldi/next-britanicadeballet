@@ -8,6 +8,14 @@ import { Link as Slink } from 'react-scroll';
 import style from "./navigation.module.scss";
 import { useAnimate } from 'framer-motion';
 
+const menuOptions = {
+  'id-clases-en-linea': 'Clases en línea',
+  'id-clases-ballet': 'Ballet',
+  'id-clases-musica': 'Música',
+  'id-profesoras': 'Profesoras',
+  'id-contacto': 'Contactos'
+}
+
 const Navigation = () => {
 
   const [menu, setMenu] = useState({
@@ -46,52 +54,19 @@ const Navigation = () => {
           <Image src='/logo.png' alt="Británica de ballet" width={166} height={339} />
         </Slink>
         <nav role="navigation">
-          <ul ref={scope} className={cn(style.navigation__menu)} onClick={handleOpenMenu} >
-            <li>
-              <Slink
-                to="id-clases-en-linea"
-                offset={-75}
-                smooth="easeInOutCubic"
-              >
-                Clases en línea
-              </Slink>
-            </li>
-            <li>
-              <Slink
-                to="id-clases-ballet"
-                offset={-75}
-                smooth="easeInOutCubic"
-              >
-                Ballet
-              </Slink>
-            </li>
-            <li>
-              <Slink
-                to="id-clases-musica"
-                offset={-75}
-                smooth="easeInOutCubic"
-              >
-                Música
-              </Slink>
-            </li>
-            <li>
-              <Slink
-                to="id-profesoras"
-                offset={-75}
-                smooth="easeInOutCubic"
-              >
-                Profesoras
-              </Slink>
-            </li>
-            <li>
-              <Slink
-                to="id-contacto"
-                offset={-75}
-                smooth="easeInOutCubic"
-              >
-                Contactos
-              </Slink>
-            </li>
+          <ul ref={scope} className={cn(style.navigation__menu)} onClick={handleOpenMenu}>
+            { Object.keys(menuOptions).map((option) => (
+              <li key={option}>
+                <Slink
+                  to={option}
+                  offset={-75}
+                  smooth="easeInOutCubic"
+                  onClick={handleOpenMenu}
+                >
+                  {menuOptions[option] }
+                </Slink>
+              </li>
+            )) }
             <div className={style.navigation__menu__logo}>
               <Slink
                 to="id-home"
