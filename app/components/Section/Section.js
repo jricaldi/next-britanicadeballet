@@ -1,8 +1,8 @@
-import Image from "next/image";
 import cn from "classnames";
 import parseHTML from 'html-react-parser';
-
+import { SectionImage } from "@/components"; 
 import style from "./section.module.scss";
+
 const renderTime = (time) => {
   if (typeof time === "string") {
     return <div>{time}</div>;
@@ -18,22 +18,12 @@ const renderData = (details) => {
 };
 
 const Section = ({ info, isClassSection }) => {
+
   const backgroundSection = isClassSection ? style.classSection : style.classTeachers;
+
   return (
     <article className={style.section} id={info.scrollId}>
-      <div className={style.section__image}>
-        <Image src={info.image.name} alt={info.name} width={info.image.width} height={info.image.height} data-aos="fade-up" />
-      </div>
-      <div className={cn(style.section__info, backgroundSection)}>
-        <span className={style.section__info__name} data-aos="zoom-out-right">
-          {info.name}
-        </span>
-        {info.extraName && (
-          <span className={style.section__info__surname} data-aos="zoom-out-right">
-            {info.extraName}
-          </span>
-        )}
-      </div>
+      <SectionImage info={{ name: info.name, extraName: info.extraName, image: info.image }} backgroundSection={backgroundSection} />
       <div className={cn(style.section__details, backgroundSection)}>
         <div
           className={cn(style.section__details__info, {

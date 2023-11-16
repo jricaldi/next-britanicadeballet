@@ -17,6 +17,8 @@ const Home = () => {
           src='/fondo-inicio-2017.jpg'
           width={1500}
           height={1000}
+          quality={60}
+          priority={true}
           alt="Academia Británica de Ballet"
         />
       </div>
