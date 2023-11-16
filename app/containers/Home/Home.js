@@ -1,9 +1,16 @@
+'use client'
+
 import Image from "next/image";
 import style from "./home.module.scss";
+import { useScroll, motion, useMotionValueEvent, useTransform } from 'framer-motion';
 
 const Home = () => {
+  const { scrollY } = useScroll();
+
+  const opacity = useTransform(scrollY, latest => 1 - latest / 600);
+
   return (
-    <section id="id-home" className={style.home}>
+    <motion.section id="id-home" className={style.home} style={{ opacity }}>
       <div className={style.home__mainImage}>
         <Image
           className={style.home__mainImage__image}
@@ -18,7 +25,7 @@ const Home = () => {
           <Image src='/caret.png' alt="caret" width={35} height={35}/>
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
