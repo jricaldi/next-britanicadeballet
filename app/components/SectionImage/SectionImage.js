@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useInView } from 'framer-motion';
 import style from './sectionImage.module.scss';
 
-const SectionImage = ({ info, backgroundSection }) => {
+const SectionImage = ({ info, backgroundSection, isClassSection }) => {
   const imageRef = useRef();
   const isInView = useInView(imageRef, { once: true });
 
@@ -29,9 +29,17 @@ const SectionImage = ({ info, backgroundSection }) => {
           height={info.image.height}/>
       </div>
       <div className={cn(style.sectionImage__info, backgroundSection)}>
-        <span className={style.sectionImage__info__name} style={nameAnimation}>
-          {info.name}
-        </span>
+        {isClassSection ?
+        (
+          <h2 className={style.sectionImage__info__name} style={nameAnimation}>
+            {info.name}
+          </h2>
+        )
+        :(
+          <span className={style.sectionImage__info__name} style={nameAnimation}>
+            {info.name}
+          </span>
+        )}
         {info.extraName && (
           <span className={style.sectionImage__info__surname} style={nameAnimation}>
             {info.extraName}

@@ -4,14 +4,12 @@ import style from "./sectionList.module.scss";
 const SectionList = ({
   scrollId,
   dataList,
-  isClassSection,
-  title
+  isClassSection
 }) => {
   const data = dataList;
 
   return (
     <section id={scrollId} className={style.sectionList}>
-      {title && <h2 className={style.sectionList__title}>{title}</h2>}
       {data.map((item, index) => (
         <Section
           info={item}

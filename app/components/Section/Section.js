@@ -23,7 +23,7 @@ const Section = ({ info, isClassSection }) => {
 
   return (
     <article className={style.section} id={info.scrollId}>
-      <SectionImage info={{ name: info.name, extraName: info.extraName, image: info.image }} backgroundSection={backgroundSection} />
+      <SectionImage isClassSection={isClassSection} info={{ name: info.name, extraName: info.extraName, image: info.image }} backgroundSection={backgroundSection} />
       <div className={cn(style.section__details, backgroundSection)}>
         <div
           className={cn(style.section__details__info, {
