@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import style from "./home.module.scss";
-import { useScroll, motion, useMotionValueEvent, useTransform } from 'framer-motion';
+import { useScroll, motion, useTransform } from 'framer-motion';
 
 const Home = () => {
   const { scrollY } = useScroll();

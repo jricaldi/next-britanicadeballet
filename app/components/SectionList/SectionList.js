@@ -5,8 +5,7 @@ const SectionList = ({
   scrollId,
   dataList,
   isClassSection,
-  title,
-  openMessageDialog,
+  title
 }) => {
   const data = dataList;
 
@@ -18,7 +17,6 @@ const SectionList = ({
           info={item}
           key={index}
           isClassSection={isClassSection}
-          openMessageDialog={openMessageDialog}
         />
       ))}
     </section>
