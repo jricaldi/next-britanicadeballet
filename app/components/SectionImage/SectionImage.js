@@ -8,7 +8,7 @@ import style from './sectionImage.module.scss';
 
 const SectionImage = ({ info, backgroundSection }) => {
   const imageRef = useRef();
-  const isInView = useInView(imageRef);
+  const isInView = useInView(imageRef, { once: true });
 
   const nameAnimation = {
     transform: isInView ? 'none' : 'translateX(-200px)',
