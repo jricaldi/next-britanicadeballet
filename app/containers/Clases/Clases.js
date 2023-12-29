@@ -1,7 +1,7 @@
 import { SectionList } from "@/components";
 import { dataClases } from "@/helpers/database";
 
-const enabledClases = dataClases.filter(clase => clase.showClass)
+const enabledClases = dataClases.filter(clase => clase.showClase)
 
 const Clases = () => {
   return (

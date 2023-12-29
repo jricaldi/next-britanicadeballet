@@ -24,7 +24,7 @@
     &__surname {
       display: block;
       font-size: (60rem/16);
-      text-shadow: 2px 1px 5px whitesmoke;
+      text-shadow: 2px 1px 8px whitesmoke;
 
       @include query(down-medium) {
         font-size: (40rem/16);

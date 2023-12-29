@@ -24,10 +24,7 @@ export const metadata = {
     description,
     creator: '@academiadballet',
   },
-  category: 'music and dance',
-  icons: {
-    icon: ['/ico.png']
-  }
+  category: 'music and dance'
 }
 
 export default function RootLayout({ children }) {
