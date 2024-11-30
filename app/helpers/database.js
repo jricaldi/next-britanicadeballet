@@ -9,10 +9,10 @@ export const dataProfesoras = [
     image: { name: '/profesoras/profesora-margarita.png', width: 690, height: 457 },
     showSchedules: true,
     schedules: [
-      {
+/*       {
         name: "Avanzadas",
         time: "Lunes y Miércoles 5:30pm - 7:00pm",
-      },
+      }, */
       {
         name: "Adolescentes & Adultas principiantes",
         time: ["Sábados 11:45am - 1:15pm (90min)"],
@@ -32,12 +32,16 @@ export const dataProfesoras = [
         time: "Martes y Jueves 3:45pm - 4:30pm",
       },
       {
-        name: "5 años",
+        name: "5 - 6 años",
         time: "Martes y Jueves 4:30pm - 5:30pm",
       },
       {
-        name: "8 - 11 años",
+        name: "9 - 12 años",
         time: "Martes y Jueves 5:30pm - 6:30pm",
+      },
+      {
+        name: "Intermedias / Avanzadas",
+        time: "Martes y Jueves 6:30pm - 7:30pm (Avanzadas hasta 8:00pm)",
       },
     ],
   },
@@ -54,11 +58,11 @@ export const dataProfesoras = [
         time: "Lunes y Miércoles 3:30pm - 4:30pm",
       },
       {
-        name: "6 - 7 años",
+        name: "7 - 8 años",
         time: "Lunes y Miércoles 4:30pm - 5:30pm",
       },
       {
-        name: "4 - 5 años",
+        name: "4 & 5 años",
         time: "Sábados 9:45am - 10:45am",
       },
       {
@@ -67,7 +71,7 @@ export const dataProfesoras = [
       },
       {
         name: "Adolescentes & Adultas principiantes",
-        time: "Lunes y Miércoles 7:00pm - 8:00pm",
+        time: "Lunes y Miércoles 6:30pm - 7:30pm",
       },
     ],
   },
@@ -106,19 +110,27 @@ export const dataClases = [
         name: "Lunes y Miércoles",
         time: [
           "3:30pm - 4:30pm (4 años)",
-          "4:30pm - 5:30pm (6 & 7 años)",
-          "5:30pm - 7:00pm (Avanzadas)",
-          "7:00pm - 8:00pm (Adolescentes y Adultas principiantes)",
+          "4:30pm - 5:30pm (7 & 8 años)",
+          "6:30pm - 7:30pm (Adolescentes y Adultas principiantes)",
         ],
       },
       {
         name: "Martes y Jueves",
         time: [
           "3:45pm - 4:30pm (3 años)",
-          "4:30pm - 5:30pm (5 años)",
-          "5:30pm - 6:30pm (8 - 11 años)",
+          "4:30pm - 5:30pm (5 & 6 años)",
+          "5:30pm - 6:30pm (9 - 12 años)",
+          "6:30pm - 7:30pm (Intermedias y Avanzadas)"
         ],
       },
+      {
+        name: "Sábados",
+        time: [
+          "9:45am - 10:45am (4 & 5 años)",
+          "10:45am - 11:45am (6 - 8 años)",
+          "11:45am - 1:15pm (Adolescentes y Adultas principiantes)",
+        ],
+      }
     ],
   },
   {
