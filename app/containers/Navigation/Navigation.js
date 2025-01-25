@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Header } from "@/components";
 import Image from "next/image";
 import cn from 'classnames';
-import { Link as Slink } from 'react-scroll';
 import style from "./navigation.module.scss";
 import { useAnimate } from 'framer-motion';
 
@@ -50,25 +49,25 @@ const Navigation = () => {
   return (
     <Header>
       <div className={style.navigation}>
-        <Slink to="id-home" className={style.navigation__logo} smooth="easeInOutCubic">
+        <a to="id-home" className={style.navigation__logo} smooth="easeInOutCubic">
           <Image src='/logo.png' alt="Británica de ballet" width={166} height={339} />
-        </Slink>
+        </a>
         <nav role="navigation">
           <ul ref={scope} className={cn(style.navigation__menu)} onClick={handleOpenMenu}>
             { Object.keys(menuOptions).map((option) => (
               <li key={option}>
-                <Slink
+                <a
                   to={option}
                   offset={-75}
                   smooth="easeInOutCubic"
                   onClick={handleOpenMenu}
                 >
                   {menuOptions[option] }
-                </Slink>
+                </a>
               </li>
             )) }
             <div className={style.navigation__menu__logo}>
-              <Slink
+              <a
                 to="id-home"
                 smooth="easeInOutCubic"
                 style={{ cursor: "pointer" }}
@@ -79,7 +78,7 @@ const Navigation = () => {
                   width={166}
                   height={339}
                 />
-              </Slink>
+              </a>
             </div>
           </ul>
           <div onClick={handleOpenMenu} className={style.navigation__wrap} />
