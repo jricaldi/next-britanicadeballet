@@ -29,7 +29,7 @@ const Section = ({ info, isClassSection }) => {
 
   return (
     <article className="w-full bg-color3 pb-8 lg:pb-12 lg:last:pb-24" id={info.scrollId}>
-      <SectionImage isClassSection={isClassSection} info={{ name: info.name, extraName: info.extraName, image: info.image }} backgroundSection={backgroundSection} />
+      <SectionImage info={{ name: info.name, extraName: info.extraName, image: info.image }} backgroundSection={backgroundSection} />
       <div className={cn(commonStyles, backgroundSection)}>
         {renderData(info.details, cn("text-color5 indent-7 columns-1 lg:columns-2 gap-12 pb-12 text-pretty", {
           "lg:columns-1": info.noColunmsText,
