@@ -1,4 +1,4 @@
-import { ClasesEnLineaDetails } from '@/containers'
+import ClasesEnLineaDetails from '@/containers/Clases/ClasesEnLineaDetails'
 
 export const dataProfesoras = [
   {

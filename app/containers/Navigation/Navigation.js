@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { Header } from "@/components";
+import Header from "@/components/Header/Header";
 import Image from "next/image";
 import cn from 'classnames';
 import { useAnimate } from 'framer-motion';

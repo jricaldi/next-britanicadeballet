@@ -1,5 +1,5 @@
 import { Libre_Baskerville } from 'next/font/google'
-import { GoogleAnalytics } from '@/components';
+import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
 import '@/sass/global.scss';
 import "@/app/global.css";
 

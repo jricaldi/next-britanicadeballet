@@ -1,6 +1,6 @@
 import cn from "classnames";
 import parseHTML from 'html-react-parser';
-import { SectionImage } from "@/components"; 
+import SectionImage from "@/components/SectionImage/SectionImage"; 
 
 const renderTime = (time) => {
   if (typeof time === "string") {
