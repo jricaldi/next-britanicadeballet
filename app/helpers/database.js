@@ -89,7 +89,7 @@ export const dataClases = [
     schedules: [
       {
         name:
-          'Solicita más información a nuestro correo: <a style="color:#3e3a3a" href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
+          'Solicita más información a nuestro correo: <a href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
       },
     ],
   },
@@ -104,7 +104,7 @@ export const dataClases = [
     schedules: [
       {
         name:
-          'Solicita más información a nuestro correo: <a style="color:#3e3a3a" href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
+          'Solicita más información a nuestro correo: <a href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
       },
       {
         name: "Lunes y Miércoles",
@@ -136,7 +136,7 @@ export const dataClases = [
   {
     name: "Música",
     details:
-      'Expande tu desarrollo artístico con nuestras clases individuales de música. Ofrecemos también de manera online clases de piano, canto, violín y teoría musical en nuestra academia. Nuestros profesores son musicólogos graduados de la Universidad de Heidelberg - Alemania. Solicita los horarios disponibles escribiéndonos al siguiente correo: <a style="color:#3e3a3a" href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
+      'Expande tu desarrollo artístico con nuestras clases individuales de música. Ofrecemos también de manera online clases de piano, canto, violín y teoría musical en nuestra academia. Nuestros profesores son musicólogos graduados de la Universidad de Heidelberg - Alemania. Solicita los horarios disponibles escribiéndonos al siguiente correo: <a href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
     image: { name: '/clases/musica.jpg', width: 690, height: 290 },
     showSchedules: true,
     showClase: true,
