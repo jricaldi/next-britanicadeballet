@@ -1,6 +1,5 @@
 import { Libre_Baskerville } from 'next/font/google'
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
-import '@/sass/global.scss';
 import "@/app/global.css";
 
 const libre = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'] })

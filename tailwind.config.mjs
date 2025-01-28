@@ -6,11 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        color1: "black",
-        color2: "#b15063",
-        color3: "snow",
-        color4: "rgba(195, 215, 238, 0.3)",
-        color5: "#3e3a3a",
+        color1: "var(--color1)",
+        color2: "var(--color2)",
+        color3: "var(--color3)",
+        color4: "var(--color4)",
+        color5: "var(--color5)",
       }
     },
   },

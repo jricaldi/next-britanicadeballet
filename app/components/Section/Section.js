@@ -44,7 +44,7 @@ const Section = ({ info, isClassSection }) => {
         {info.showSchedules &&
           info.schedules.map((schedule) => (
             <div key={schedule.name} className="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between border-b border-b-gray-200 last:border-b-0 py-2">
-              <div className="w-full lg:w-1/2 text-center lg:text-lef font-semibold only:w-full flex justify-center align-middle">
+              <div className="w-full lg:w-1/2 text-center lg:text-lef font-semibold only:w-full flex justify-center items-center">
                 {renderData(schedule.name, "w-full lg:w-11/12")}
               </div>
               {schedule.time && (

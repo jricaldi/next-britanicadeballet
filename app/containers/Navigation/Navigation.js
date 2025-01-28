@@ -68,7 +68,7 @@ const Navigation = () => {
                 </a>
               </li>
             )) }
-            <div className="flex justify-center align-middle mh-[200px] mt-10">
+            <div className="flex justify-center items-center mh-[200px] mt-10">
               <a
                 to="id-home"
                 smooth="easeInOutCubic"
