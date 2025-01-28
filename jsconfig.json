@@ -19,10 +19,7 @@
       ],
       "@/helpers/*": [
         "app/helpers/*"
-      ],
-      "@/sass/*": [
-        "app/sass/*"
-      ],
+      ]
     }
   }
 }
