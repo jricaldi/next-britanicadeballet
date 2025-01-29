@@ -1,5 +1,6 @@
 import { Libre_Baskerville } from 'next/font/google'
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
+import { ScrollProvider } from '@/context/ScrollContext';
 import "@/app/global.css";
 
 const libre = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'] })
@@ -29,7 +30,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={libre.className}>{children}</body>
+      <body className={libre.className}>
+        <ScrollProvider>
+          {children}
+        </ScrollProvider>
+      </body>
       <GoogleAnalytics />
     </html>
   )

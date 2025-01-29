@@ -19,6 +19,9 @@
       ],
       "@/helpers/*": [
         "app/helpers/*"
+      ],
+      "@/context/*": [
+        "app/context/*"
       ]
     }
   }
