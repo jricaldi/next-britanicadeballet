@@ -54,7 +54,7 @@ const Navigation = () => {
           <Image className="h-full w-auto" src='/logo.png' alt="Británica de ballet" width={166} height={339} />
         </AnchorLink>
         <nav role="navigation">
-          <ul ref={scope} className="top-0 left-0 fixed w-full bg-color1 overflow-hidden m-0 p-0 pt-[50px] h-full opacity-0 hidden">
+          <ul ref={scope} className="top-0 left-0 fixed w-full bg-color1 m-0 p-0 pt-[50px] h-full opacity-0 hidden">
             { Object.keys(menuOptions).map((option) => (
               <li key={option} className='text-center p-2 first:mt-12'>
                 <AnchorLink

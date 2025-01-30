@@ -11,8 +11,8 @@ const Home = () => {
 
   return (
     <TargetSection targetKey="id-home">
-      <motion.section className="min-h-screen min-w-[100vw] overflow-visible" style={{ opacity }}>
-        <div className="min-w-[100vw] min-h-screen fixed flex justify-center items-center">
+      <motion.section className="min-h-screen" style={{ opacity }}>
+        <div className="min-h-screen fixed flex justify-center items-center w-screen">
           <Image
             className="h-auto w-full lg:h-screen lg:w-auto bg-center bg-no-repeat bg-cover"
             src='/fondo-inicio-2017.jpg'
@@ -23,7 +23,7 @@ const Home = () => {
             alt="Academia Británica de Ballet"
             />
         </div>
-        <div className="min-w-[100vw] min-h-screen flex justify-center items-end pb-[75px]">
+        <div className="min-h-screen flex justify-center items-end pb-[75px]">
           <a className="flex justify-center items-center h-[53px] w-[53px] border-[3px]
             border-color3 rounded-[50%] z-[1] animation-bounce hover:cursor-pointer
             scale-100 hover:scale-90 ease-in-out duration-300"
