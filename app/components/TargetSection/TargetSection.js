@@ -3,14 +3,14 @@
 import React from 'react';
 import { useScroll } from "@/context/ScrollContext";
 
-const TargetSection = ({ targetKey, children, ...restProps }) => {
+const TargetSection = ({ targetKey, children }) => {
   const { setRef } = useScroll();
 
   // Asegúrate de que `children` sea un único elemento válido antes de clonarlo
   if (React.isValidElement(children)) {
     return React.cloneElement(children, {
       ref: setRef(targetKey), // Añade el ref al único hijo
-      ...restProps
+      'data-target': targetKey
     });
   }
 
