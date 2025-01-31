@@ -2,6 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/*": [
+        "./*"
+      ],
       "@/components": [
         "app/components"
       ],
@@ -17,9 +20,9 @@
       "@/helpers/*": [
         "app/helpers/*"
       ],
-      "@/sass/*": [
-        "app/sass/*"
-      ],
+      "@/context/*": [
+        "app/context/*"
+      ]
     }
   }
 }

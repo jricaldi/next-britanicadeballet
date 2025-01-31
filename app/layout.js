@@ -1,7 +1,6 @@
 import { Libre_Baskerville } from 'next/font/google'
-import { GoogleAnalytics } from '@/components';
-import 'normalize.css/normalize.css';
-import '@/sass/global.scss';
+import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
+import "@/app/global.css";
 
 const libre = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -30,7 +29,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={libre.className}>{children}</body>
+      <body className={libre.className}>
+        {children}
+      </body>
       <GoogleAnalytics />
     </html>
   )

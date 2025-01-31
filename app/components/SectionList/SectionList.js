@@ -1,5 +1,4 @@
-import { Section } from "@/components";
-import style from "./sectionList.module.scss";
+import Section from "@/components/Section/Section";
 
 const SectionList = ({
   scrollId,
@@ -9,7 +8,7 @@ const SectionList = ({
   const data = dataList;
 
   return (
-    <section id={scrollId} className={style.sectionList}>
+    <section id={scrollId}  className="max-w-5xl mx-auto">
       {data.map((item, index) => (
         <Section
           info={item}

@@ -1,4 +1,4 @@
-import {SectionList} from "@/components";
+import SectionList from "@/components/SectionList/SectionList";
 import { dataProfesoras } from "@/helpers/database";
 
 const Profesoras = () => (

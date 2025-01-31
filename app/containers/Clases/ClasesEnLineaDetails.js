@@ -13,11 +13,7 @@ const ClasesEnLineaDetails = () => {
       música
     </Slink>{" "}
     e idiomas. Infórmate de nuestros horarios de clases grupales&nbsp;
-    <Slink
-      to="id-clases-ballet-horarios"
-      smooth="easeInOutCubic"
-      offset={-75}
-    >
+    <Slink to="id-clases-ballet-horarios" smooth="easeInOutCubic" offset={-75}>
       acá.
     </Slink>{" "}
     Para una mejor interacción entre profesora & alumnas y asegurar la

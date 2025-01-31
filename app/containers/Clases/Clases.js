@@ -1,4 +1,4 @@
-import { SectionList } from "@/components";
+import SectionList from "@/components/SectionList/SectionList";
 import { dataClases } from "@/helpers/database";
 
 const enabledClases = dataClases.filter(clase => clase.showClase)
