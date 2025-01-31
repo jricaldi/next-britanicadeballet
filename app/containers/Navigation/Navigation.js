@@ -5,7 +5,7 @@ import Header from "@/components/Header/Header";
 import Image from "next/image";
 import cn from 'classnames';
 import { useAnimate } from 'framer-motion';
-import AnchorLink from '@/app/components/AnchorLink/AnchorLink';
+import { Link as Slink } from 'react-scroll';
 
 const menuOptions = {
   /* 'id-clases-en-linea': 'Clases en línea', */
@@ -50,32 +50,34 @@ const Navigation = () => {
   return (
     <Header>
       <div className="flex items-center justify-between bg-color1 opacity-90 fixed h-[75px] w-screen py-2 z-[998]">
-        <AnchorLink targetKey="id-home" className="h-full pl-[10vw] cursor-pointer">
+        <Slink to="id-home" className="h-full pl-[10vw] cursor-pointer">
           <Image className="h-full w-auto" src='/logo.png' alt="Británica de ballet" width={166} height={339} />
-        </AnchorLink>
+        </Slink>
         <nav role="navigation">
           <ul ref={scope} className="top-0 left-0 fixed w-full bg-color1 m-0 p-0 pt-[50px] h-full opacity-0 hidden">
             { Object.keys(menuOptions).map((option) => (
               <li key={option} className='text-center p-2 first:mt-12'>
-                <AnchorLink
+                <Slink
                   className='cursor-pointer text-[150%] text-color3 font-bold w-full'
-                  targetKey={option}
+                  to={option}
+                  smooth="easeInOutCubic"
+                  offset={-75}
                   onClick={handleOpenMenu}
                 >
                   {menuOptions[option] }
-                </AnchorLink>
+                </Slink>
               </li>
             )) }
             <div className="flex justify-center items-center mh-[200px] mt-10">
-              <AnchorLink targetKey="id-home" onClick={handleOpenMenu}>
+              <Slink to="id-home" onClick={handleOpenMenu}>
                 <Image
-                  className='h-20 w-auto'
+                  className='h-20 w-auto cursor-pointer'
                   src='/logo.png'
                   alt="Británica de ballet"
                   width={166}
                   height={339}
                 />
-              </AnchorLink>
+              </Slink>
             </div>
           </ul>
           <div onClick={handleOpenMenu} className="absolute top-5 h-[50px] w-[50px] opacity-0 z-[999] cursor-pointer" />

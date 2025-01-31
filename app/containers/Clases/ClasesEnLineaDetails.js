@@ -1,21 +1,21 @@
 'use client'
 
-import AnchorLink from "@/app/components/AnchorLink/AnchorLink";
+import { Link as Slink } from 'react-scroll';
 
 const ClasesEnLineaDetails = () => {
   return (<>
     Ofrecemos clases remotas grupales e individuales tanto de&nbsp;
-    <AnchorLink targetKey="id-clases-ballet">
+    <Slink to="id-clases-ballet" smooth="easeInOutCubic" offset={-75}>
       ballet
-    </AnchorLink>
+    </Slink>
     ,&nbsp;
-    <AnchorLink targetKey="id-clases-musica">
+    <Slink to="id-clases-musica" smooth="easeInOutCubic" offset={-75}>
       música
-    </AnchorLink>{" "}
+    </Slink>{" "}
     e idiomas. Infórmate de nuestros horarios de clases grupales&nbsp;
-    <AnchorLink targetKey="id-clases-ballet-horarios">
+    <Slink to="id-clases-ballet-horarios" smooth="easeInOutCubic" offset={-75}>
       acá.
-    </AnchorLink>{" "}
+    </Slink>{" "}
     Para una mejor interacción entre profesora & alumnas y asegurar la
     privacidad de nuestra comunidad, dictamos las clases usando{" "}
     <a href="https://zoom.us" target="_blank">

@@ -15,11 +15,18 @@
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-scroll": "^1.9.0",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17"
+  },
+  "overrides": {
+    "react-scroll": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
