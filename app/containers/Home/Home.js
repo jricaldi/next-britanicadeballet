@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useScroll, motion, useTransform } from 'framer-motion';
+import caret from '@/images/caret.png';
+import fondoInicio2017 from '@/images/fondo-inicio-2017.jpg';
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -12,12 +14,11 @@ const Home = () => {
     <motion.section id="id-home" className="min-h-screen" style={{ opacity }}>
       <div className="min-h-screen fixed flex justify-center items-center w-screen">
         <Image
-          className="h-auto w-full lg:h-screen lg:w-auto bg-center bg-no-repeat bg-cover"
-          src='/fondo-inicio-2017.jpg'
-          width={1500}
-          height={1000}
-          quality={60}
-          priority={true}
+          fill
+          className="h-auto w-full lg:h-screen lg:w-auto bg-center bg-no-repeat bg-cover object-contain"
+          src={fondoInicio2017}
+          priority
+          sizes="84.41vw"
           alt="Academia Británica de Ballet"
           />
       </div>
@@ -26,7 +27,11 @@ const Home = () => {
           border-color3 rounded-[50%] z-[1] animation-bounce hover:cursor-pointer
           scale-100 hover:scale-90 ease-in-out duration-300"
           >
-          <Image src='/caret.png' alt="caret" width={35} height={35}/>
+          <Image
+            src={caret}
+            className="object-contain"
+            alt="caret"
+            priority />
         </a>
       </div>
     </motion.section>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import cn from 'classnames';
 import { useAnimate } from 'framer-motion';
 import { Link as Slink } from 'react-scroll';
+import logo from '@/images/logo.png';
 
 const menuOptions = {
   /* 'id-clases-en-linea': 'Clases en línea', */
@@ -51,7 +52,11 @@ const Navigation = () => {
     <Header>
       <div className="flex items-center justify-between bg-color1 opacity-90 fixed h-[75px] w-screen py-2 z-[998]">
         <Slink to="id-home" className="h-full pl-[10vw] cursor-pointer">
-          <Image className="h-full w-auto" src='/logo.png' alt="Británica de ballet" width={166} height={339} />
+          <Image
+            className="h-full w-auto"
+            src={logo}
+            priority
+            alt="Británica de ballet"/>
         </Slink>
         <nav role="navigation">
           <ul ref={scope} className="top-0 left-0 fixed w-full bg-color1 m-0 p-0 pt-[50px] h-full opacity-0 hidden">
@@ -68,17 +73,12 @@ const Navigation = () => {
                 </Slink>
               </li>
             )) }
-            <div className="flex justify-center items-center mh-[200px] mt-10">
-              <Slink to="id-home" onClick={handleOpenMenu}>
-                <Image
-                  className='h-20 w-auto cursor-pointer'
-                  src='/logo.png'
-                  alt="Británica de ballet"
-                  width={166}
-                  height={339}
-                />
-              </Slink>
-            </div>
+            <Slink to="id-home" onClick={handleOpenMenu} className='flex justify-center items-center mh-[200px] mt-10'>
+              <Image
+                className='h-20 w-auto cursor-pointer'
+                src={logo}
+                alt="Británica de ballet"/>
+            </Slink>
           </ul>
           <div onClick={handleOpenMenu} className="absolute top-5 h-[50px] w-[50px] opacity-0 z-[999] cursor-pointer" />
           <div className='top-[30px] pr-[15vw]'>
