@@ -23,7 +23,8 @@ export const metadata = {
     description,
     creator: '@academiadballet',
   },
-  category: 'music and dance'
+  category: 'music and dance',
+  themeColor: "#b15063"
 }
 
 export default function RootLayout({ children }) {
