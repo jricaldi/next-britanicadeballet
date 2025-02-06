@@ -23,7 +23,10 @@ export const metadata = {
     description,
     creator: '@academiadballet',
   },
-  category: 'music and dance',
+  category: 'music and dance'
+}
+
+export const viewport = {
   themeColor: "#b15063"
 }
 
