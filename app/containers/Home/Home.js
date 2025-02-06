@@ -18,6 +18,7 @@ const Home = () => {
           className="h-auto w-full lg:h-screen lg:w-auto bg-center bg-no-repeat bg-cover object-contain"
           src={fondoInicio2017}
           priority
+          fetchPriority="high"
           sizes="84.41vw"
           alt="Academia Británica de Ballet"
           />
