@@ -51,7 +51,7 @@ const Navigation = () => {
   return (
     <Header>
       <div className="flex items-center justify-between bg-color1 opacity-90 fixed h-[75px] w-screen py-2 z-[998]">
-        <Slink to="id-home" className="h-full pl-[10vw] cursor-pointer">
+        <Slink to="id-home" className="h-full pl-[10vw] cursor-pointer" href='#'>
           <Image
             className="h-full w-auto"
             src={logo}
@@ -68,6 +68,7 @@ const Navigation = () => {
                   smooth="easeInOutCubic"
                   offset={-75}
                   onClick={handleOpenMenu}
+                  href='#'
                 >
                   {menuOptions[option] }
                 </Slink>
@@ -77,6 +78,7 @@ const Navigation = () => {
               <Image
                 className='h-20 w-auto cursor-pointer'
                 src={logo}
+                href='#'
                 alt="Británica de ballet"/>
             </Slink>
           </ul>

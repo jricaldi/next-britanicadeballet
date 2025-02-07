@@ -11,7 +11,7 @@ const Home = () => {
   const opacity = useTransform(scrollY, latest => 1 - latest / 600);
 
   return (
-    <motion.section id="id-home" className="min-h-screen" style={{ opacity }}>
+    <motion.section id="id-home" className="h-dvh" style={{ opacity }}>
       <div className="min-h-screen fixed flex justify-center items-center w-screen">
         <Image
           fill
@@ -27,6 +27,7 @@ const Home = () => {
         <a className="flex justify-center items-center h-[53px] w-[53px] border-[3px]
           border-color3 rounded-[50%] z-[1] animation-bounce hover:cursor-pointer
           scale-100 hover:scale-90 ease-in-out duration-300"
+          href="#"
           >
           <Image
             src={caret}
