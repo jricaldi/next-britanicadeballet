@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useScroll, motion, useTransform } from 'framer-motion';
 import caret from '@/images/caret.png';
+import { Link as Slink } from 'react-scroll';
 import fondoInicio2017 from '@/images/fondo-inicio-2017.jpg';
 
 const Home = () => {
@@ -24,9 +25,11 @@ const Home = () => {
           />
       </div>
       <div className="min-h-screen flex justify-center items-end pb-[75px]">
-        <a className="flex justify-center items-center h-[53px] w-[53px] border-[3px]
+        <Slink className="flex justify-center items-center h-[53px] w-[53px] border-[3px]
           border-color3 rounded-[50%] z-[1] animation-bounce hover:cursor-pointer
           scale-100 hover:scale-90 ease-in-out duration-300"
+          to="id-about"
+          smooth="easeInOutCubic"
           href="#"
           >
           <Image
@@ -34,7 +37,7 @@ const Home = () => {
             className="object-contain"
             alt="caret"
             priority />
-        </a>
+        </Slink>
       </div>
     </motion.section>
   );

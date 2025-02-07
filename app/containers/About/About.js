@@ -1,5 +1,5 @@
 const About = () => (
-  <section className="bg-transparent flex items-center justify-center">
+  <section id="id-about" className="bg-transparent flex items-center justify-center">
     <div className="text-color3 px-1 text-center">
       <h1 className="text-5xl font-bold my-7">Academia Británica de Ballet</h1>
       <div className="text-4xl">
