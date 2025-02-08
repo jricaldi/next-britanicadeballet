@@ -89,7 +89,7 @@ const Navigation = () => {
           </ul>
           <div onClick={handleOpenMenu} className="absolute top-5 h-[50px] w-[50px] opacity-0 z-[999] cursor-pointer" />
           <div className='top-[30px] pr-[15vw]'>
-            <a href='#'>
+            <a href='#' aria-label='menu despegable'>
               <div className={cn(menuUIStyles, { "top-[13px] rotate-45": menu.topMenu, "top-[5px]": !menu.topMenu })}
               />
               <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": menu.midMenu })}
