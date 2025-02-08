@@ -1,6 +1,5 @@
 const Contacto = () => {
   const anchorStyle = "block text-color3 border-[2px] border-color3 text-xs p-3 text-center capitalize letter-[2px] tracking-[2px] font-semibold cursor-pointer mt-10 rounded-sm w-full lg:w-32 first:mt-0 hover:border-color2";
-  const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=-12.131459991368802,-77.00035304905748&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C-12.131459991368802,-77.00035304905748&key=YOUR_GOOGLE_MAPS_API_KEY`;
 
   return (
     <section id="id-contacto" className='pb-24'>
