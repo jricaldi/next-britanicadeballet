@@ -12,7 +12,7 @@ const Home = () => {
   const opacity = useTransform(scrollY, latest => 1 - latest / 600);
 
   return (
-    <motion.section id="id-home" className="h-dvh" style={{ opacity }}>
+    <motion.section id="id-home" className="min-h-screen" style={{ opacity }}>
       <div className="min-h-screen fixed flex justify-center items-center w-screen">
         <Image
           fill
