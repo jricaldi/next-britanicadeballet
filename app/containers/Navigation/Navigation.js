@@ -74,7 +74,12 @@ const Navigation = () => {
                 </Slink>
               </li>
             )) }
-            <Slink to="id-home" onClick={handleOpenMenu} className='flex justify-center items-center mh-[200px] mt-10'>
+            <Slink
+              to="id-home"
+              href="#"
+              onClick={handleOpenMenu}
+              className='flex justify-center items-center mh-[200px] mt-10'
+            >
               <Image
                 className='h-20 w-auto cursor-pointer'
                 src={logo}
@@ -84,7 +89,7 @@ const Navigation = () => {
           </ul>
           <div onClick={handleOpenMenu} className="absolute top-5 h-[50px] w-[50px] opacity-0 z-[999] cursor-pointer" />
           <div className='top-[30px] pr-[15vw]'>
-            <a>
+            <a href='#'>
               <div className={cn(menuUIStyles, { "top-[13px] rotate-45": menu.topMenu, "top-[5px]": !menu.topMenu })}
               />
               <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": menu.midMenu })}
