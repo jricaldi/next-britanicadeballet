@@ -1,5 +1,7 @@
 const Contacto = () => {
   const anchorStyle = "block text-color3 border-[2px] border-color3 text-xs p-3 text-center capitalize letter-[2px] tracking-[2px] font-semibold cursor-pointer mt-10 rounded-sm w-full lg:w-32 first:mt-0 hover:border-color2";
+  const mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=-12.131459991368802,-77.00035304905748&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:A%7C-12.131459991368802,-77.00035304905748&key=YOUR_GOOGLE_MAPS_API_KEY`;
+
   return (
     <section id="id-contacto" className='pb-24'>
       <div className="flex justify-center flex-wrap m-0 p-[40px_5%_0_5%] lg:flex-nowrap lg:mx-[5%] lg:p-[100px_13%_0_13%]">
@@ -65,6 +67,7 @@ const Contacto = () => {
             <iframe className="border-none w-full h-[300px]" title="Ubicación de Academia Británica de Ballet"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7176653663755!2d-77.00035304905748!3d-12.131459991368802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8087d4a59a9%3A0x4a3ecbdc4a007ceb!2sAcademia+Brit%C3%A1nica+de+Ballet!5e0!3m2!1ses-419!2sus!4v1498017371971"
               allowFullScreen
+              loading="lazy"
               />
           </div>
         </div>
