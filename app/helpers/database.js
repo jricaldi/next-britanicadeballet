@@ -85,7 +85,7 @@ export const dataClases = [
     name: "Clases en línea",
     details: () => (< ClasesEnLineaDetails />),
     noColunmsText: true,
-    image: { name: '/clases/clasesEnLinea.jpg', width: 690, height: 636},
+    image: { name: '/clases/curso-online.jpg', width: 690, height: 636},
     showSchedules: true,
     showClase: false,
     scrollId: "id-clases-en-linea",
@@ -100,7 +100,7 @@ export const dataClases = [
     name: "Ballet",
     details:
       "Entendemos que al ser parte del desarrollo artístico de nuestras alumnas, estamos formando el crecimiento humano en cada una de ellas. Tenemos el privilegio de cumplir esta labor  desde 1956. Seguimos la metodología de ballet clásico de la Royal Academy of Dance de Inglaterra que introdujo a Lima nuestra fundadora la maestra inglesa Rosina Müller. Fuimos los primeros en introducir el Tap en el Perú y es por eso que a partir del grado Pre-primary 2 nuestras alumnas se forman con dos tipos de danza: la hora de clase se divide en 45min de ballet y 15min de Tap. Nuestras alumnas se benefician con descuentos en clases individuales de música. Ofrecemos también de manera online clases de piano, canto, violín y teoría musical.",
-    image: { name: '/clases/ballet-2017.jpg', width: 690, height: 388 },
+    image: { name: '/clases/curso-ballet.png', width: 690, height: 350 },
     showSchedules: true,
     showClase: true,
     scrollId: "id-clases-ballet",
@@ -140,7 +140,7 @@ export const dataClases = [
     name: "Música",
     details:
       'Expande tu desarrollo artístico con nuestras clases individuales de música. Ofrecemos también de manera online clases de piano, canto, violín y teoría musical en nuestra academia. Nuestros profesores son musicólogos graduados de la Universidad de Heidelberg - Alemania. Solicita los horarios disponibles escribiéndonos al siguiente correo: <a href="mailto:britanicaballet@gmail.com?Subject=Consulta%20de%20horarios-clases%20privadas">britanicaballet@gmail.com</a>',
-    image: { name: '/clases/musica.jpg', width: 690, height: 290 },
+    image: { name: '/clases/curso-piano.jpg', width: 690, height: 290 },
     showSchedules: true,
     showClase: true,
     scrollId: "id-clases-musica",
@@ -155,7 +155,7 @@ export const dataClases = [
     extraName: "Contemporánea",
     details:
       "Desarrolla tu creatividad y sensibilidad artística aprendiendo las técnicas básicas de la Danza Contemporánea. Si sientes motivación por expresarte mediante el cuerpo, deseas cargarte de energía, mantenerte en forma e iniciarte dentro de esta bella disciplina, solicita una clase de prueba con nosotros.",
-    image: { name: '/clases/danzaContemporanea.jpg', width: 690, height: 423 },
+    image: { name: '/clases/curso-danza-contemporanea.jpg', width: 690, height: 423 },
     showSchedules: true,
     showClase: false,
     scrollId: "id-clases-danza",
@@ -170,7 +170,7 @@ export const dataClases = [
     name: "Musicoterapia",
     details:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    image: { name: '/clases/musicoterapia.jpg', width: 690, height: 460 },
+    image: { name: '/clases/curso-musicoterapia.jpg', width: 690, height: 460 },
     showSchedules: false,
     showClase: false,
     schedules: [
