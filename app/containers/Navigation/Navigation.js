@@ -35,7 +35,7 @@ const Navigation = () => {
     setIsMenuOpen(nextState);
   };
 
-  const menuUIStyles = "bg-light mt-[30px] absolute w-6 h-[2px] rounded-[10px] transition duration-[0.6s] ease-out";
+  const menuUIStyles = "bg-light absolute w-6 h-[2px] rounded-[10px] transition duration-[0.6s] ease-out";
 
   return (
     <Header>
@@ -67,7 +67,7 @@ const Navigation = () => {
               to="id-home"
               href="#"
               onClick={handleOpenMenu}
-              className='flex justify-center items-center mh-[200px] mt-10'
+              className='flex justify-center items-center min-h-[200px] mt-10'
             >
               <Image
                 className='h-20 w-auto cursor-pointer'
@@ -75,18 +75,15 @@ const Navigation = () => {
                 alt="Británica de ballet"/>
             </Slink>
           </ul>
-          <div className='top-[30px] pr-[15vw]'>
+          <div className="absolute top-5 right-[15vw] z-[999]">
             <button
               onClick={handleOpenMenu}
               aria-label="Menú desplegable"
-              className="flex flex-col gap-[8px] items-center cursor-pointer relative z-[999]"
+              className="relative w-6 h-[21px] cursor-pointer bg-transparent border-none p-0"
             >
-              <div className={cn(menuUIStyles, { "top-[13px] rotate-45": isMenuOpen, "top-[5px]": !isMenuOpen })}
-              />
-              <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": isMenuOpen })}
-              />
-              <div className={cn(menuUIStyles, { "top-[13px] rotate-[-225deg]": isMenuOpen, "top-[21px]": !isMenuOpen })}
-              />
+              <div className={cn(menuUIStyles, { "top-[13px] rotate-45": isMenuOpen, "top-[5px]": !isMenuOpen })} />
+              <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": isMenuOpen })} />
+              <div className={cn(menuUIStyles, { "top-[13px] rotate-[-225deg]": isMenuOpen, "top-[21px]": !isMenuOpen })} />
             </button>
           </div>
         </nav>
