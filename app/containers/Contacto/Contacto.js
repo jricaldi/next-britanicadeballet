@@ -1,5 +1,5 @@
 const Contacto = () => {
-  const anchorStyle = "block text-color3 border-[2px] border-color3 text-xs p-3 text-center capitalize letter-[2px] tracking-[2px] font-semibold cursor-pointer mt-10 rounded-sm w-full lg:w-32 first:mt-0 hover:border-color2";
+  const anchorStyle = "block text-light border-[2px] border-light text-xs p-3 text-center capitalize tracking-[2px] font-semibold cursor-pointer mt-10 rounded-xs w-full lg:w-32 first:mt-0 hover:border-primary";
 
   return (
     <section id="id-contacto" className='pb-24'>
@@ -31,17 +31,7 @@ const Contacto = () => {
           </a>
         </div>
         <div className="w-full lg:w-[70%] p-0 lg:px-[100px]">
-          <div className="text-color3 text-center lg:text-left">
-            {/*
-              <p>
-              <b>
-              Nuestra academia se encuentra cerrada por vacaciones de fin de
-              año.
-              <br />
-              <br />
-              Atención presencial desde el jueves 02 de enero 2020.
-              </b>
-              </p> */}
+          <div className="text-light text-center lg:text-left">
             <br />
             <br />
             <a href="tel:+5114481113">+51 1 448-1113</a>
@@ -51,16 +41,14 @@ const Contacto = () => {
                 britanicaballet@gmail.com
               </a>
             </p>
-            {
-              <p>
-                <br />
-                <br />
-                Atención telefónica:
-                <br />
-                <br />
-                Miércoles, Viernes y Sábados 10am - 6pm
-              </p>
-            }
+            <p>
+              <br />
+              <br />
+              Atención telefónica:
+              <br />
+              <br />
+              Miércoles, Viernes y Sábados 10am - 6pm
+            </p>
           </div>
           <div className="mt-10 w-full">
             <iframe className="border-none w-full h-[300px]" title="Ubicación de Academia Británica de Ballet"
