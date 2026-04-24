@@ -9,7 +9,6 @@ import { Link as Slink } from 'react-scroll';
 import logo from '@/images/logo.png';
 
 const menuOptions = {
-  /* 'id-clases-en-linea': 'Clases en línea', */
   'id-clases-ballet': 'Ballet',
   'id-clases-musica': 'Música',
   'id-profesoras': 'Profesoras',
@@ -18,39 +17,29 @@ const menuOptions = {
 
 const Navigation = () => {
 
-  const [menu, setMenu] = useState({
-    topMenu: false,
-    midMenu: false,
-    bottomMenu: false
-  })
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scope, animate] = useAnimate();
 
   const handleOpenMenu = () => {
-    setMenu((prev) => {
-      const animationMenu = async () => {
-        if (prev.topMenu) {
-          await animate(scope.current, { opacity: 0 });
-          await animate(scope.current, { display: 'none' });
-        } else {
-          animate(scope.current, { opacity: 1, display: 'block' });
-        }
-      }
+    const nextState = !isMenuOpen;
 
-      animationMenu();
+    if (nextState) {
+      animate(scope.current, { opacity: 1, display: 'block' });
+    } else {
+      (async () => {
+        await animate(scope.current, { opacity: 0 });
+        animate(scope.current, { display: 'none' });
+      })();
+    }
 
-      return {
-        topMenu: !prev.topMenu,
-        midMenu: !prev.midMenu,
-        bottomMenu: !prev.bottomMenu,
-      }
-    });
+    setIsMenuOpen(nextState);
   };
 
-  const menuUIStyles = "bg-color3 mt-[30px] absolute w-6 h-[2px] rounded-[10px] transition duration-[0.6s] ease-out";
+  const menuUIStyles = "bg-light mt-[30px] absolute w-6 h-[2px] rounded-[10px] transition duration-[0.6s] ease-out";
 
   return (
     <Header>
-      <div className="flex items-center justify-between bg-color1 opacity-90 fixed h-[75px] w-screen py-2 z-[998]">
+      <div className="flex items-center justify-between bg-dark opacity-90 fixed h-[75px] w-screen py-2 z-[998]">
         <Slink to="id-home" className="h-full pl-[10vw] cursor-pointer" href='#'>
           <Image
             className="h-full w-auto"
@@ -59,11 +48,11 @@ const Navigation = () => {
             alt="Británica de ballet"/>
         </Slink>
         <nav role="navigation">
-          <ul ref={scope} className="top-0 left-0 fixed w-full bg-color1 m-0 p-0 pt-[50px] h-full opacity-0 hidden">
+          <ul ref={scope} className="top-0 left-0 fixed w-full bg-dark m-0 p-0 pt-[50px] h-full opacity-0 hidden">
             { Object.keys(menuOptions).map((option) => (
               <li key={option} className='text-center p-2 first:mt-12'>
                 <Slink
-                  className='cursor-pointer text-[150%] text-color3 font-bold w-full'
+                  className='cursor-pointer text-[150%] text-light font-bold w-full'
                   to={option}
                   smooth="easeInOutCubic"
                   offset={-75}
@@ -83,20 +72,22 @@ const Navigation = () => {
               <Image
                 className='h-20 w-auto cursor-pointer'
                 src={logo}
-                href='#'
                 alt="Británica de ballet"/>
             </Slink>
           </ul>
-          <div onClick={handleOpenMenu} className="absolute top-5 h-[50px] w-[50px] opacity-0 z-[999] cursor-pointer" />
           <div className='top-[30px] pr-[15vw]'>
-            <a href='#' aria-label='menu despegable'>
-              <div className={cn(menuUIStyles, { "top-[13px] rotate-45": menu.topMenu, "top-[5px]": !menu.topMenu })}
+            <button
+              onClick={handleOpenMenu}
+              aria-label="Menú desplegable"
+              className="flex flex-col gap-[8px] items-center cursor-pointer relative z-[999]"
+            >
+              <div className={cn(menuUIStyles, { "top-[13px] rotate-45": isMenuOpen, "top-[5px]": !isMenuOpen })}
               />
-              <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": menu.midMenu })}
+              <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": isMenuOpen })}
               />
-              <div className={cn(menuUIStyles, { "top-[13px] rotate-[-225deg]": menu.bottomMenu, "top-[21px]": !menu.bottomMenu })}
+              <div className={cn(menuUIStyles, { "top-[13px] rotate-[-225deg]": isMenuOpen, "top-[21px]": !isMenuOpen })}
               />
-            </a>
+            </button>
           </div>
         </nav>
       </div>
