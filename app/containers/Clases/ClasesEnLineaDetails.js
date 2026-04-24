@@ -18,11 +18,11 @@ const ClasesEnLineaDetails = () => {
     </Slink>{" "}
     Para una mejor interacción entre profesora & alumnas y asegurar la
     privacidad de nuestra comunidad, dictamos las clases usando{" "}
-    <a href="https://zoom.us" target="_blank">
+    <a href="https://zoom.us" target="_blank" rel="noopener noreferrer">
       zoom
     </a>
     . Somos miembros de la agencia de servicios online&nbsp;
-    <a href="https://www.limalista.com" target="_blank">
+    <a href="https://www.limalista.com" target="_blank" rel="noopener noreferrer">
       Lima Lista.
     </a>
   </>)
