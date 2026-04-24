@@ -1,9 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-dark: black;
+  --color-primary: #b15063;
+  --color-light: snow;
+  --color-muted: rgba(195, 215, 238, 0.3);
+  --color-body: #3e3a3a;
+}
 
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -11,37 +17,25 @@
   100% {
     transform: translateY(0);
   }
-
   40% {
     transform: translateY(-15px);
   }
-
   60% {
     transform: translateY(-15px);
   }
 }
 
-@layer utilities {
-  .text-shadow {
-    text-shadow: 2px 1px 8px whitesmoke;
-  }
-
-  .animation-bounce {
-    animation: bounce 2s;
-  }
+@utility text-shadow {
+  text-shadow: 2px 1px 8px whitesmoke;
 }
 
-:root {
-  --color1: black;
-  --color2: #b15063;
-  --color3: snow;
-  --color4: rgba(195, 215, 238, 0.3);
-  --color5: #3e3a3a;
+@utility animation-bounce {
+  animation: bounce 2s;
 }
 
 html,
 body {
-  background-color: var(--color1);
+  background-color: var(--color-dark);
 }
 
 section {
