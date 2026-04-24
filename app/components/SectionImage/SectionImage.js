@@ -29,7 +29,7 @@ const SectionImage = ({ info, backgroundSection }) => {
           height={info.image.height}/>
       </div>
       <div className={cn("mt-[-25px] lg:mt-[-40px] pl-[5%]", backgroundSection)}>
-        <span className="block text-[40px] lg:text-6xl text-shadow text-color2" style={nameAnimation}>
+          <span className="block text-[40px] lg:text-6xl text-shadow text-primary" style={nameAnimation}>
           {info.name}
         </span>
         {info.extraName && (

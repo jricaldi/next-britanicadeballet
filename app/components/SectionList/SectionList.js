@@ -9,10 +9,10 @@ const SectionList = ({
 
   return (
     <section id={scrollId}  className="max-w-5xl mx-auto">
-      {data.map((item, index) => (
+      {data.map((item) => (
         <Section
           info={item}
-          key={index}
+          key={item.scrollId}
           isClassSection={isClassSection}
         />
       ))}
