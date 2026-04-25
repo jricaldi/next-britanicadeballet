@@ -23,8 +23,8 @@ const Home = () => {
           alt="Academia Británica de Ballet"
           />
       </div>
-      <div className="min-h-screen flex justify-center items-end pb-[75px]">
-        <Slink className="flex justify-center items-center h-[53px] w-[53px] border-[3px] border-light rounded-[50%] z-[1] animation-bounce hover:cursor-pointer scale-100 hover:scale-90 ease-in-out duration-300"
+      <div className="min-h-screen flex justify-center items-end pb-18.75">
+        <Slink className="flex justify-center items-center h-13.25 w-13.25 border-[3px] border-light rounded-[50%] z-1 animation-bounce hover:cursor-pointer scale-100 hover:scale-90 ease-in-out duration-300"
           to="id-about"
           smooth="easeInOutCubic"
           href="#"
