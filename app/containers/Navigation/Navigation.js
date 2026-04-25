@@ -79,7 +79,7 @@ const Navigation = () => {
             <button
               onClick={handleOpenMenu}
               aria-label="Menú desplegable"
-              className="relative w-6 h-[21px] cursor-pointer bg-transparent border-none p-0"
+              className="focus:outline-none relative w-6 h-[21px] cursor-pointer bg-transparent border-none p-0"
             >
               <div className={cn(menuUIStyles, { "top-[13px] rotate-45": isMenuOpen, "top-[5px]": !isMenuOpen })} />
               <div className={cn(menuUIStyles, "top-[13px]", { "opacity-0": isMenuOpen })} />
