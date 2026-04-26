@@ -17,7 +17,7 @@ const SectionImage = ({ info, backgroundSection }) => {
 
   return (
     <>
-      <div ref={imageRef} className="max-h-[600px] overflow-hidden" style={{
+      <div ref={imageRef} className="max-h-150 overflow-hidden" style={{
         transform: isInView ? 'none' : 'translateY(150px)',
         opacity: isInView ? 1 : 0,
         transition: "all 0.3s ease-in-out"
@@ -28,7 +28,7 @@ const SectionImage = ({ info, backgroundSection }) => {
           width={info.image.width}
           height={info.image.height}/>
       </div>
-      <div className={cn("mt-[-25px] lg:mt-[-40px] pl-[5%]", backgroundSection)}>
+      <div className={cn("-mt-6.25 lg:-mt-10 pl-[5%]", backgroundSection)}>
           <span className="block text-[40px] lg:text-6xl text-shadow text-primary" style={nameAnimation}>
           {info.name}
         </span>
