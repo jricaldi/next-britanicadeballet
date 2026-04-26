@@ -1,18 +1,27 @@
 'use client'
 
 import Image from "next/image";
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import caret from '@/images/caret.png';
 import { Link as Slink } from 'react-scroll';
 import fondoInicio2017 from '@/images/fondo-inicio-2017.jpg';
 
 const Home = () => {
-  const { scrollY } = useScroll();
+  const [opacity, setOpacity] = useState(1);
 
-  const opacity = useTransform(scrollY, latest => 1 - latest / 600);
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      setOpacity(Math.max(0, 1 - y / 600));
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <motion.section id="id-home" className="min-h-screen" style={{ opacity }}>
+    <section id="id-home" className="min-h-screen" style={{ opacity, transition: 'opacity 0.15s ease-out' }}>
       <div className="min-h-screen fixed flex justify-center items-center w-screen">
         <Image
           fill
@@ -36,7 +45,7 @@ const Home = () => {
             priority />
         </Slink>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
