@@ -22,6 +22,7 @@ const Home = () => {
 
   return (
     <section id="id-home" className="min-h-screen" style={{ opacity, transition: 'opacity 0.15s ease-out' }}>
+      <h1 className="sr-only">Academia Británica de Ballet - Clases de Ballet en Lima, Surco</h1>
       <div className="min-h-screen fixed flex justify-center items-center w-screen">
         <Image
           fill

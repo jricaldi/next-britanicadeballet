@@ -1,0 +1,42 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
+export default function GoogleMap() {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '300px' }
+    )
+
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div ref={ref} className="mt-10 w-full">
+      {isVisible ? (
+        <iframe
+          className="border-none w-full h-75"
+          title="Ubicación de Academia Británica de Ballet"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7176653663755!2d-77.00035304905748!3d-12.131459991368802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8087d4a59a9%3A0x4a3ecbdc4a007ceb!2sAcademia+Brit%C3%A1nica+de+Ballet!5e0!3m2!1ses-419!2sus!4v1498017371971"
+          allowFullScreen
+          loading="lazy"
+        />
+      ) : (
+        <div className="border-none w-full h-75 bg-dark" />
+      )}
+    </div>
+  )
+}

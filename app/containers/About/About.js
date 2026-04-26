@@ -1,7 +1,7 @@
 const About = () => (
   <section id="id-about" className="bg-transparent flex items-center justify-center">
     <div className="text-light px-1 text-center">
-      <h1 className="text-5xl font-bold my-7">Academia Británica de Ballet</h1>
+      <h2 className="text-5xl font-bold my-7">Academia Británica de Ballet</h2>
       <div className="text-4xl">
         Formando bailarinas desde <span className="text-primary">1956</span>
       </div>

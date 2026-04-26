@@ -1,3 +1,5 @@
+import GoogleMap from '@/components/GoogleMap/GoogleMap';
+
 const Contacto = () => {
   const anchorStyle = "block text-light border-[2px] border-light text-xs p-3 text-center capitalize tracking-[2px] font-semibold cursor-pointer mt-10 rounded-xs w-full lg:w-32 first:mt-0 hover:border-primary";
 
@@ -50,13 +52,7 @@ const Contacto = () => {
               Miércoles, Viernes y Sábados 10am - 6pm
             </p>
           </div>
-          <div className="mt-10 w-full">
-            <iframe className="border-none w-full h-75" title="Ubicación de Academia Británica de Ballet"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.7176653663755!2d-77.00035304905748!3d-12.131459991368802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b8087d4a59a9%3A0x4a3ecbdc4a007ceb!2sAcademia+Brit%C3%A1nica+de+Ballet!5e0!3m2!1ses-419!2sus!4v1498017371971"
-              allowFullScreen
-              loading="lazy"
-              />
-          </div>
+          <GoogleMap />
         </div>
       </div>
     </section>

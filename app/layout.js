@@ -1,5 +1,6 @@
 import { Libre_Baskerville } from 'next/font/google'
 import GoogleAnalytics from '@/components/GoogleAnalytics/GoogleAnalytics';
+import JsonLd from '@/components/JsonLd/JsonLd';
 import "@/app/global.css";
 
 const libre = Libre_Baskerville({ subsets: ['latin'], weight: ['400', '700'] })
@@ -11,19 +12,35 @@ export const metadata = {
   metadataBase: new URL(url),
   title: 'Academia Británica de Ballet',
   description,
+  keywords: ['ballet', 'clases de ballet', 'danza contemporánea', 'piano', 'canto', 'violín', 'musicoterapia', 'tap', 'Lima', 'Surco', 'academia de ballet'],
+  alternates: {
+    canonical: url,
+  },
   openGraph: {
     title: 'Academia Británica de Ballet',
     type: 'website',
     description,
     url,
     siteName: 'Academia Británica de Ballet',
+    locale: 'es_PE',
+    images: [
+      {
+        url: '/opengraph-image.jpg',
+        width: 1500,
+        height: 1000,
+      },
+    ],
   },
   twitter: {
     title: 'Academia Británica de Ballet',
     description,
     creator: '@academiadballet',
   },
-  category: 'music and dance'
+  category: 'music and dance',
+  robots: {
+    index: true,
+    follow: true,
+  }
 }
 
 export const viewport = {
@@ -35,6 +52,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={libre.className}>
         {children}
+        <JsonLd />
         <GoogleAnalytics />
       </body>
     </html>
