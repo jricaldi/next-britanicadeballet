@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from "@/components/Header/Header";
 import Image from "next/image";
 import cn from 'classnames';
-import { useAnimate } from 'framer-motion';
 import { Link as Slink } from 'react-scroll';
 import logo from '@/images/logo.png';
 
@@ -18,21 +17,9 @@ const menuOptions = {
 const Navigation = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scope, animate] = useAnimate();
 
   const handleOpenMenu = () => {
-    const nextState = !isMenuOpen;
-
-    if (nextState) {
-      animate(scope.current, { opacity: 1, display: 'block' });
-    } else {
-      (async () => {
-        await animate(scope.current, { opacity: 0 });
-        animate(scope.current, { display: 'none' });
-      })();
-    }
-
-    setIsMenuOpen(nextState);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const menuUIStyles = "bg-light absolute w-6 h-[2px] rounded-[10px] transition duration-[0.6s] ease-out";
@@ -48,7 +35,10 @@ const Navigation = () => {
             alt="Británica de ballet"/>
         </Slink>
         <nav role="navigation">
-          <ul ref={scope} className="top-0 left-0 fixed w-full bg-dark m-0 p-0 pt-12.5 h-full opacity-0 hidden">
+          <ul className={cn(
+            "top-0 left-0 fixed w-full bg-dark m-0 p-0 pt-12.5 h-full transition-opacity duration-300 ease-in-out",
+            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          )}>
             { Object.keys(menuOptions).map((option) => (
               <li key={option} className='text-center p-2 first:mt-12'>
                 <Slink
